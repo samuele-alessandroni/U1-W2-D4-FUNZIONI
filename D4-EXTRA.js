@@ -107,6 +107,25 @@ console.log('Riepilogo ordini:',shoppingCart);
  Crea una funzione chiamata "maxShoppingCart" che riceve l'array "shoppingCart" e ritorna l'oggetto più costoso in esso contenuto.
 */
 
+function maxShoppingCart(shoppingCart) {
+    let x = 0
+    for (let i = 0; i < shoppingCart.length; i++) {
+        if (shoppingCart[i].price > x) {
+            x = shoppingCart[i].price
+        }
+        
+    }
+    
+    let y = 0
+
+    for (let i = 0; i < shoppingCart.length; i++) {
+        if (shoppingCart[i].price === x) {
+            return console.log("Questo è l'articolo di maggior valore:", shoppingCart[i]);
+        }
+    }
+}
+
+maxShoppingCart(shoppingCart)
 /* SCRIVI QUI LA TUA RISPOSTA */
 
 /* EXTRA 5
@@ -114,7 +133,11 @@ console.log('Riepilogo ordini:',shoppingCart);
  Crea una funzione chiamata "latestShoppingCart" che riceve l'array "shoppingCart" e ritorna l'ultimo elemento.
 */
 
+function latestShoppingCart(shoppingCart) {
+    console.log("Questo è l'ultimo item del cart", shoppingCart.pop());
+}
 
+latestShoppingCart(shoppingCart)
 /* SCRIVI QUI LA TUA RISPOSTA */
 
 /* EXTRA 6
@@ -127,6 +150,7 @@ console.log('Riepilogo ordini:',shoppingCart);
 /* EXTRA 7
 Crea una funzione chiamata "average" che riceve un array come parametro e ne ritorna la media aritmetica. La funzione salta automaticamente i valori non numerici nell'array.
 */
+
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
