@@ -151,7 +151,23 @@ latestShoppingCart(shoppingCart)
 Crea una funzione chiamata "average" che riceve un array come parametro e ne ritorna la media aritmetica. La funzione salta automaticamente i valori non numerici nell'array.
 */
 
+function average(arrOfNumbs) {
+    let sum = 0
+    let lenghtNumbs = 0
+    for (let i = 0; i < arrOfNumbs.length; i++) {
+        if (typeof(arrOfNumbs[i]) === typeof(1)) {
+            sum += arrOfNumbs[i]
+            lenghtNumbs++
+        }
+        
+    }
 
+    return console.log("La media dell'array è:", sum/lenghtNumbs);
+}
+
+const arrProva = [50,100,'ciao']
+
+average(arrProva)
 /* SCRIVI QUI LA TUA RISPOSTA */
 
 /* EXTRA 8
@@ -170,8 +186,22 @@ Crea una funzione chiamata "average" che riceve un array come parametro e ne rit
 /* EXTRA 10
  Scrivi una funzione che riceve una data come parametro, e calcola il numero di giorni passati da quella data.
 */
+function timePassed(date) {
+    const now = new Date()
+    const actDate = [now.getDate(), now.getMonth() + 1, now.getFullYear()]
+    let timePassed = []
+    for (let i = 0; i < actDate.length; i++) {
+        timePassed[i] = actDate[i] - date[i]
+        
+    }
+    
+    return console.log('Dalla data:', date[0], date[1], date[2], 'sono passati', timePassed[0], 'giorni', timePassed[1], 'mesi e', timePassed[2], 'anno/i');
+}
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+const dataPassata = [24,1,2023]
+
+timePassed(dataPassata)
+    /* SCRIVI QUI LA TUA RISPOSTA */
 
 /* EXTRA 11
  Scrivi una funzione chiamata "matrixGenerator" che riceve come parametri due numeri interi, "x" e "y".
